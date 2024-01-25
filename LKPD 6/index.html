@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var jumlahSiswa = 15;
+      var totalNilaiMinimum = 475;
+      var kehadiranMinimum = 100;
+
+      var juara = null;
+
+      for (var i = 1; i <= jumlahSiswa; i++) {
+        var namaSiswa = prompt("Masukkan nama siswa ke-" + i + ":");
+        var totalNilai = 0;
+
+        var nilaiMTK = parseFloat(
+          prompt("Masukkan nilai MTK untuk " + namaSiswa + ":")
+        );
+        var nilaiINDO = parseFloat(
+          prompt("Masukkan nilai INDO untuk " + namaSiswa + ":")
+        );
+        var nilaiINGG = parseFloat(
+          prompt("Masukkan nilai INGG untuk " + namaSiswa + ":")
+        );
+        var nilaiDPK = parseFloat(
+          prompt("Masukkan nilai DPK untuk " + namaSiswa + ":")
+        );
+        var nilaiAgama = parseFloat(
+          prompt("Masukkan nilai Agama untuk " + namaSiswa + ":")
+        );
+
+        totalNilai = nilaiMTK + nilaiINDO + nilaiINGG + nilaiDPK + nilaiAgama;
+
+        var kehadiran = parseFloat(
+          prompt("Masukkan presentase kehadiran (%) untuk " + namaSiswa + ":")
+        );
+
+        if (totalNilai >= totalNilaiMinimum && kehadiran === kehadiranMinimum) {
+          juara = namaSiswa;
+          break;
+        }
+      }
+
+      if (juara !== null) {
+        console.log("Juara kelas adalah: " + juara);
+      } else {
+        console.log(
+          "Tidak ada siswa yang memenuhi syarat sebagai juara kelas."
+        );
+      }
+    </script>
+  </body>
+</html>

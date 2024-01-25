@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ind">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var bilangan = prompt("Masukkan sebuah bilangan bulat:");
+
+      // Mengambil digit sesuai posisi
+      var satuan = bilangan % 10;
+      var puluhan = Math.floor(bilangan / 10) % 10;
+      var ratusan = Math.floor(bilangan / 100);
+
+      // Menampilkan hasil
+      console.log("Bilangan", bilangan, "mempunyai:");
+      console.log("Nilai", ratusan, "Adalah Ratusan");
+      console.log("Nilai", puluhan, "Adalah Puluhan");
+      console.log("Nilai", satuan, "Adalah Satuan");
+    </script>
+  </body>
+</html>

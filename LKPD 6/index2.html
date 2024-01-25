@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var jumlahTiketVIP = 50;
+      var jumlahTiketEksekutif = 50;
+      var jumlahTiketEkonomi = 50;
+
+      var hargaTiketVIP = 100000;
+      var hargaTiketEksekutif = 75000;
+      var hargaTiketEkonomi = 50000;
+
+      var totalKeuntungan = 0;
+      var totalTiketTerjual = 0;
+
+      // Menghitung keuntungan dan jumlah tiket terjual untuk kelas VIP
+      var tiketTerjualVIP = parseInt(prompt("Jumlah tiket VIP yang terjual:"));
+      var keuntunganVIP = 0;
+
+      if (tiketTerjualVIP >= 35) {
+        keuntunganVIP = 0.25 * tiketTerjualVIP * hargaTiketVIP;
+      } else if (tiketTerjualVIP >= 20) {
+        keuntunganVIP = 0.15 * tiketTerjualVIP * hargaTiketVIP;
+      } else {
+        keuntunganVIP = 0.05 * tiketTerjualVIP * hargaTiketVIP;
+      }
+
+      totalKeuntungan += keuntunganVIP;
+      totalTiketTerjual += tiketTerjualVIP;
+
+      console.log("Keuntungan kelas VIP: " + keuntunganVIP);
+      console.log("Jumlah tiket terjual kelas VIP: " + tiketTerjualVIP);
+
+      // Menghitung keuntungan dan jumlah tiket terjual untuk kelas Eksekutif
+      var tiketTerjualEksekutif = parseInt(
+        prompt("Jumlah tiket Eksekutif yang terjual:")
+      );
+      var keuntunganEksekutif = 0;
+
+      if (tiketTerjualEksekutif >= 40) {
+        keuntunganEksekutif = 0.2 * tiketTerjualEksekutif * hargaTiketEksekutif;
+      } else if (tiketTerjualEksekutif >= 20) {
+        keuntunganEksekutif = 0.1 * tiketTerjualEksekutif * hargaTiketEksekutif;
+      } else {
+        keuntunganEksekutif =
+          0.02 * tiketTerjualEksekutif * hargaTiketEksekutif;
+      }
+
+      totalKeuntungan += keuntunganEksekutif;
+      totalTiketTerjual += tiketTerjualEksekutif;
+
+      console.log("Keuntungan kelas Eksekutif: " + keuntunganEksekutif);
+      console.log(
+        "Jumlah tiket terjual kelas Eksekutif: " + tiketTerjualEksekutif
+      );
+
+      // Menghitung keuntungan dan jumlah tiket terjual untuk kelas Ekonomi
+      var tiketTerjualEkonomi = parseInt(
+        prompt("Jumlah tiket Ekonomi yang terjual:")
+      );
+      var keuntunganEkonomi = 0.07 * tiketTerjualEkonomi * hargaTiketEkonomi;
+
+      totalKeuntungan += keuntunganEkonomi;
+      totalTiketTerjual += tiketTerjualEkonomi;
+
+      console.log("Keuntungan kelas Ekonomi: " + keuntunganEkonomi);
+      console.log("Jumlah tiket terjual kelas Ekonomi: " + tiketTerjualEkonomi);
+
+      // Menampilkan total keuntungan dan jumlah tiket terjual dari seluruh kelas
+      console.log("Total keuntungan: " + totalKeuntungan);
+      console.log(
+        "Total tiket terjual dari seluruh kelas: " + totalTiketTerjual
+      );
+    </script>
+  </body>
+</html>
