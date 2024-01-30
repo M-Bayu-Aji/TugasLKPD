@@ -7,14 +7,15 @@
   </head>
   <body>
     <script>
-      var suhuTemperatur = prompt('Masukkan Suhu Temperatur');
-
-      if (suhuTemperatur > 300 ) {
-        console.log('Panas');
-      } else if (suhuTemperatur < 250) {
-        console.log('Dingin');
+      let suhuFahrenheit = prompt("Masukkan Suhu");
+      let celcius = (5 / 9) * (suhuFahrenheit - 32);
+      
+      if ( suhuFahrenheit > 300) {
+        console.log('Panas ' + celcius);
+      } else if ( suhuFahrenheit < 250) {
+        console.log('Dingin ' + celcius);
       } else {
-        console.log('Normal');
+        console.log('Normal ' + celcius);
       }
     </script>
   </body>

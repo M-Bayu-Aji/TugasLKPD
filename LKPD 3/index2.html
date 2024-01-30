@@ -12,10 +12,12 @@
       // Mengambil digit sesuai posisi
       var satuan = bilangan % 10;
       var puluhan = Math.floor(bilangan / 10) % 10;
-      var ratusan = Math.floor(bilangan / 100);
+      var ratusan = Math.floor(bilangan / 100) % 10;
+      var ribuan = Math.floor(bilangan / 1000);
 
       // Menampilkan hasil
       console.log("Bilangan", bilangan, "mempunyai:");
+      console.log('Nilai', ribuan, 'Adalah Ribuan');
       console.log("Nilai", ratusan, "Adalah Ratusan");
       console.log("Nilai", puluhan, "Adalah Puluhan");
       console.log("Nilai", satuan, "Adalah Satuan");
